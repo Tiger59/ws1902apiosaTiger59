@@ -104,7 +104,7 @@ async function main() {
       if (geoFeatures.length > 0) {
         const [first] = geoFeatures;
         const lct = parseCoordinates(first.Geometry.Coordinates);
-        const tenki = await axios({
+        var  tenki =  axios({
           url: 'http://weather.livedoor.com/forecast/webservice/json/v1?city=400040'
         });
 
