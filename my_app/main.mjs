@@ -111,7 +111,7 @@ async function main() {
         // APIから受け取った内容をコンソールに表示
         console.log(JSON.stringify(tenki_data, undefined, 2));
 
-        resultText.textContent = `${first.Name}の天気\n ${tenki}`;
+        resultText.textContent = `${first.Name}の天気\n`;
         // 地図を移動してラベル追加
         drawMap(map, lct);
         const label = new Y.Label(new Y.LatLng(lct.lat, lct.lng),`場所: ${first.Name}\n緯度: ${lct.lat}\n経度: ${lct.lng} `);
