@@ -36,7 +36,7 @@ async function requestGeoCoderAPI(query) {
   console.log(JSON.stringify(data, undefined, 2));
   return data.ResultInfo.Count > 0 ? data.Feature : [];
 }
-var array1={"稚内": "011000", "旭川": "012010", "留萌": "012020", "網走": "013010", "北見": "013020", "紋別": "013030",
+var text2code={"稚内": "011000", "旭川": "012010", "留萌": "012020", "網走": "013010", "北見": "013020", "紋別": "013030",
 "根室": "014010", "釧路": "014020", "帯広": "014030", "室蘭": "015010", "浦河": "015020", "札幌": "016010",
 "岩見沢": "016020", "倶知安": "016030", "函館": "017010", "江差": "017020", "青森": "020010", "むつ": "020020",
 "八戸": "020030", "盛岡": "030010", "宮古": "030020", "大船渡": "030030", "仙台": "040010", "白石": "040020",
@@ -104,10 +104,10 @@ async function main() {
       if (geoFeatures.length > 0) {
         const [first] = geoFeatures;
         const lct = parseCoordinates(first.Geometry.Coordinates);
-        resultText.textContent = `${first.Name}の天気\n緯度: ${query}`;
+        resultText.textContent = `${first.Name}の天気\n緯度: ${text2code.query}`;
         // 地図を移動してラベル追加
         drawMap(map, lct);
-        const label = new Y.Label(new Y.LatLng(lct.lat, lct.lng),`場所: ${first.Name}\n緯度: ${lct.lat}\n経度: ${lct.lng} ${array1.さいたま}`);
+        const label = new Y.Label(new Y.LatLng(lct.lat, lct.lng),`場所: ${first.Name}\n緯度: ${lct.lat}\n経度: ${lct.lng} `);
         map.addFeature(label);
         var marker = new Y.Marker(new Y.LatLng(lct.lat, lct.lng));
         map.addFeature(marker);
