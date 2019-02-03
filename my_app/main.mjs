@@ -104,9 +104,8 @@ async function main() {
       if (geoFeatures.length > 0) {
         const [first] = geoFeatures;
         const lct = parseCoordinates(first.Geometry.Coordinates);
-        var  tenki =  axios({
-          url: 'http://weather.livedoor.com/forecast/webservice/json/v1?city=400040'
-        });
+        script.src = "http://weather.livedoor.com/forecast/webservice/json/v1?city=400040"
+        document.body.appendChild(script);
         const { tenki_data } = tenki;
         // APIから受け取った内容をコンソールに表示
         console.log(JSON.stringify(tenki_data, undefined, 2));
