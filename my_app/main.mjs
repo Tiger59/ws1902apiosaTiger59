@@ -104,7 +104,11 @@ async function main() {
       if (geoFeatures.length > 0) {
         const [first] = geoFeatures;
         const lct = parseCoordinates(first.Geometry.Coordinates);
-        resultText.textContent = `${first.Name}の天気\n緯度: ${text2code.query}`;
+        const tenki = await axios({
+          url: 'http://weather.livedoor.com/forecast/webservice/json/v1?city=400040'
+        });
+
+        resultText.textContent = `${first.Name}の天気\n ${tenki}`;
         // 地図を移動してラベル追加
         drawMap(map, lct);
         const label = new Y.Label(new Y.LatLng(lct.lat, lct.lng),`場所: ${first.Name}\n緯度: ${lct.lat}\n経度: ${lct.lng} `);
