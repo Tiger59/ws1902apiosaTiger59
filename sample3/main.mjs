@@ -84,7 +84,7 @@ async function main() {
         resultText.textContent = `場所: ${first.Name}, 緯度: ${lct.lat}, 経度: ${lct.lng}`;
         // 地図を移動してラベル追加
         drawMap(map, lct);
-        const label = new Y.Label(new Y.LatLng(lct.lat, lct.lng),`場所: ${first.Name}<\n> 緯度: ${lct.lat}<\n>経度: ${lct.lng}`);
+        const label = new Y.Label(new Y.LatLng(lct.lat, lct.lng),`場所: ${first.Name}\n緯度: ${lct.lat}\n経度: ${lct.lng}`);
         map.addFeature(label);
         var marker = new Y.Marker(new Y.LatLng(lct.lat, lct.lng));
         map.addFeature(marker);
