@@ -43,7 +43,7 @@ async function requestGeoCoderAPI(query) {
  * @param {object} options 位置情報(lat, lng)を含んだパラメータ
  */
 function drawMap(map, options) {
-  const zoomLevel = 17;
+  const zoomLevel = 50;
   map.drawMap(new Y.LatLng(options.lat, options.lng), zoomLevel, Y.LayerSetId.NORMAL);
 }
 
