@@ -65,6 +65,7 @@ function parseCoordinates(str) {
 async function main() {
   // 地図を初期化
   const map = new Y.Map('map');
+  map.setConfigure('weatherOverlay', true);
   drawMap(map, { lat: 35.68227528, lng: 139.73310240 });
   // コントロールの追加
   const sliderZoomControl = new Y.SliderZoomControlVertical();
@@ -87,7 +88,7 @@ async function main() {
         map.addFeature(label);
         var marker = new Y.Marker(new Y.LatLng(lct.lat, lct.lng));
         map.addFeature(marker);
-        map.setConfigure('weatherOverlay', true);
+
       } else {
         resultText.textContent = '正しい住所を入力してください';
       }
