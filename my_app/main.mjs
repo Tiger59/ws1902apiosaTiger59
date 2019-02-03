@@ -87,6 +87,7 @@ async function main() {
         map.addFeature(label);
         var marker = new Y.Marker(new Y.LatLng(lct.lat, lct.lng));
         map.addFeature(marker);
+        map.setConfigure('weatherOverlay', true);
       } else {
         resultText.textContent = '正しい住所を入力してください';
       }
