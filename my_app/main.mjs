@@ -107,6 +107,9 @@ async function main() {
         var  tenki =  axios({
           url: 'http://weather.livedoor.com/forecast/webservice/json/v1?city=400040'
         });
+        const { tenki_data } = tenki;
+        // APIから受け取った内容をコンソールに表示
+        console.log(JSON.stringify(tenki_data, undefined, 2));
 
         resultText.textContent = `${first.Name}の天気\n ${tenki}`;
         // 地図を移動してラベル追加
