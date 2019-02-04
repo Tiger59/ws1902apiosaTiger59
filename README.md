@@ -13,3 +13,5 @@
   - ローカルでサーバーを立ち上げて, 変更を検知して自動再読込をしてくれるツールです.
 - （オプション）ESLint
   - JavaScriptの文法をチェックしてくれるツールです. Eslintのnode_moduleを依存しています. Node.jsを利用しないなら、このプラグインもインストールしなくて大丈夫です.
+ 
+ My site is published at https://hacku-jp.github.io/ws1902apiosaTiger59/
