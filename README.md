@@ -14,4 +14,4 @@
 - （オプション）ESLint
   - JavaScriptの文法をチェックしてくれるツールです. Eslintのnode_moduleを依存しています. Node.jsを利用しないなら、このプラグインもインストールしなくて大丈夫です.
  
- My site is published at https://tiger59.github.io/ws1902apiosaTiger59/
+ My site is published at https://tiger59.github.io/ws1902apiosaTiger59/my_app/index.html
