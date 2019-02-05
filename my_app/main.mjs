@@ -31,6 +31,10 @@ async function requestGeoCoderAPI(query) {
       output: 'json',
     },
   });
+  const w_url = 'http://weather.livedoor.com/forecast/webservice/json/v1?city=011000';
+  fetch(w_url).then(function(response) {
+    console.log(response.text)
+})
   console.log("天気予報です")
   const { data } = response;
   // APIから受け取った内容をコンソールに表示
