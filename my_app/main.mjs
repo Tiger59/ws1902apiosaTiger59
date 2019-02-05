@@ -104,9 +104,9 @@ async function main() {
       if (geoFeatures.length > 0) {
         const [first] = geoFeatures;
         const lct = parseCoordinates(first.Geometry.Coordinates);
+        const weather_url = "http://weather.livedoor.com/forecast/webservice/json/v1?city="+query;
 
-
-        resultText.textContent = `${first.Name}の天気は未実装です`;
+        resultText.textContent = `${first.Name}の天気は${weather_url}です`;
         // 地図を移動してラベル追加
         drawMap(map, lct);
         const label = new Y.Label(new Y.LatLng(lct.lat, lct.lng),`場所: ${first.Name}\n緯度: ${lct.lat}\n経度: ${lct.lng} `);
