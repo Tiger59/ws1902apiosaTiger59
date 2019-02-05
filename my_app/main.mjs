@@ -31,6 +31,7 @@ async function requestGeoCoderAPI(query) {
       output: 'json',
     },
   });
+  console.log(response);
   const { data } = response;
   // APIから受け取った内容をコンソールに表示
   console.log(JSON.stringify(data, undefined, 2));
