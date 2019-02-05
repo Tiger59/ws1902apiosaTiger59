@@ -31,18 +31,8 @@ async function requestGeoCoderAPI(query) {
       output: 'json',
     },
   });
+  //axios.get('http://weather.livedoor.com/forecast/webservice/json/v1?city=011000')
 
-  $.ajax({
-    type: 'GET',
-    url: 'http://weather.livedoor.com/forecast/webservice/json/v1?city=011000',
-    dataType: 'json',
-    success: function(json){
-      var len = json.length;
-      for(var i=0; i < len; i++){
-        $("#a").append(json[i].version + ' ' + json[i].codename + '<br>');
-      }
-    }
-  });
 
   console.log("天気予報です")
   const { data } = response;
