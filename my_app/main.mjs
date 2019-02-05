@@ -120,6 +120,7 @@ async function main() {
         map.addFeature(marker);
         console.log(weather_url)
         fetch(weather_url).then(function(response) {
+          console.log(response.text())
           return response.text();
       }).then(function(text) {
           var result = document.querySelector('#result');
