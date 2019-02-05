@@ -118,6 +118,12 @@ async function main() {
         map.addFeature(label);
         var marker = new Y.Marker(new Y.LatLng(lct.lat, lct.lng));
         map.addFeature(marker);
+        fetch(weather_url).then(function(response) {
+          return response.text();
+      }).then(function(text) {
+          var result = document.querySelector('#result');
+          result.innerHTML = text;
+      });
 
       } else {
         resultText.textContent = '正しい住所を入力してください';
