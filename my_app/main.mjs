@@ -38,7 +38,7 @@ async function requestGeoCoderAPI(query) {
   console.log("天気予報です")
   const { data } = response;
   // APIから受け取った内容をコンソールに表示
-  console.log(JSON.stringify(data, undefined, 2));
+  //console.log(JSON.stringify(data, undefined, 2));
   return data.ResultInfo.Count > 0 ? data.Feature : [];
 }
 var text2code={"稚内": "011000", "旭川": "012010", "留萌": "012020", "網走": "013010", "北見": "013020", "紋別": "013030",
