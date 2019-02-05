@@ -31,7 +31,7 @@ async function requestGeoCoderAPI(query) {
       output: 'json',
     },
   });
-  //axios.get('http://weather.livedoor.com/forecast/webservice/json/v1?city=011000')
+  //axios.get('https://weather.livedoor.com/forecast/webservice/json/v1?city=011000')
 
 
   console.log("天気予報です")
@@ -118,6 +118,7 @@ async function main() {
         map.addFeature(label);
         var marker = new Y.Marker(new Y.LatLng(lct.lat, lct.lng));
         map.addFeature(marker);
+        console.log(weather_url)
         fetch(weather_url).then(function(response) {
           return response.text();
       }).then(function(text) {
