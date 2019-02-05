@@ -34,7 +34,7 @@ async function requestGeoCoderAPI(query) {
   const w_response = await axios({
     url: "http://weather.livedoor.com/forecast/webservice/json/v1?city=011000"
   });
-  console.log(w_response);
+  //console.log(w_response);
   console.log("天気予報です")
   const { data } = response;
   // APIから受け取った内容をコンソールに表示
